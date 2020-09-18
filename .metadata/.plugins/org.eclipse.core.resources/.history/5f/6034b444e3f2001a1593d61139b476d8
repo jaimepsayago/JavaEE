@@ -1,0 +1,134 @@
+package controller;
+
+
+import static javax.faces.context.FacesContext.getCurrentInstance;
+
+import java.io.Serializable;
+
+import javax.faces.event.ActionEvent;
+//import javax.ejb.EJB;
+//import javax.faces.bean.ManagedBean;
+//import javax.faces.bean.SessionScoped;
+import javax.faces.model.DataModel;
+import javax.faces.model.ListDataModel;
+
+
+
+import javax.inject.Inject;
+import javax.inject.Named;
+
+import javax.enterprise.context.RequestScoped;
+
+
+
+
+import model.Post;
+import dao.PostService;
+
+
+
+
+@Named
+@RequestScoped
+public class CategoriaController implements Serializable{
+		
+	/**
+	 * 
+	 */ 
+	private static final long serialVersionUID = 1L;
+
+	
+	@Inject
+	private PostService service;
+	
+
+	private Post post ;
+	
+	DataModel<Post> lista;
+	
+	Long idSelecionado;
+
+	public CategoriaController() {
+		if (post == null){
+			post= new Post();
+		}
+	
+	}
+
+
+	
+	public DataModel<Post> getLista() {
+		lista= new ListDataModel<Post>(service.findAll());
+		return lista;
+	}
+
+	
+	
+	public void setLista(DataModel<Post> lista) {
+		this.lista = lista;
+	}
+	
+	public String guardar() {
+		try {
+			System.out.println("service: "+service);
+			service.save(post);
+		} catch(Exception ex) {
+			//log.error("Erro ao salvar mercadoria.", ex);
+		
+			System.out.print("error"+ ex.getMessage());
+			return "";
+		}
+		
+		return "listaPost";
+	}
+	
+	public void editar() {
+		if (idSelecionado == null) {
+			return;
+		}
+		post = service.find(idSelecionado);
+		//log.debug("Pronto pra editar");
+	}
+	
+	public String remover(ActionEvent e) {
+		try {
+			post = new Post();
+			String i = e.getComponent().getAttributes().get("postEliminar").toString();
+			
+			Long l= new Long(i);
+			System.out.println("*-*-*-*-*-*-"+l);
+			post.setId(l);
+			service.remove(post);
+		} catch(Exception ex) {
+			//log.error("Erro ao remover mercadoria.", ex);
+			System.out.println(ex.getMessage());
+			return "";
+		}
+		//log.debug("Removeu mercadoria "+mercadoria.getId());
+		return "listaPost";
+	}
+	
+	public Post getPost() {
+		return post;
+	}
+
+
+
+	public void setPost(Post post) {
+		this.post = post;
+	}
+	
+
+	
+	public Long getIdSelecionado() {
+		return idSelecionado;
+	}
+
+
+
+	public void setIdSelecionado(Long idSelecionado) {
+		this.idSelecionado = idSelecionado;
+	}
+	
+
+}

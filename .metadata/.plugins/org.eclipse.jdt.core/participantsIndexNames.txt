@@ -1,0 +1,25 @@
+INDEX VERSION 1.131
+D:\TI\Development2020\eclipse\workspace2020\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3067807168.index
+\EX-WEB\src
+D:\TI\Development2020\eclipse\workspaceTallerJavaEE\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\390213387.index
+\EX-WEB\src
+D:\TI\Development2020\eclipse\workspace2020\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\390213387.index
+\EX-WEB\src
+D:\TI\Development2020\eclipse\workspaceTallerJavaEE\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\14503460.index
+\EX-WEB\src
+D:\TI\Development2020\eclipse\workspace2020\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1831648954.index
+\EX-WEB\src
+D:\TI\Development2020\eclipse\workspace2020\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\129526105.index
+\cdi-jsf-crud\src\main\resources
+D:\TI\Development2020\eclipse\workspace2020\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3156474399.index
+\okta-java-jsf-crud-example\src\main\java
+D:\TI\Development2020\eclipse\workspace2020\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\14503460.index
+\EX-WEB\src
+D:\TI\Development2020\eclipse\workspaceTallerJavaEE\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1831648954.index
+\EX-WEB\src
+D:\TI\Development2020\eclipse\workspaceTallerJavaEE\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3067807168.index
+\EX-WEB\src
+D:\TI\Development2020\eclipse\workspace2020\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2145444370.index
+\cdi-jsf-crud\src\main\resources
+D:\TI\Development2020\eclipse\workspace2020\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\666855120.index
+\MavenEnterpriseApp-web\src\main\java

@@ -1,0 +1,36 @@
+package dao;
+
+import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
+
+import model.Post;
+
+/**
+ * Componente <code>EJB</code> que implementa as operações de negócio da entidade <code>Post</code>.
+ * 
+ * <p>Herda <code>AbstractPersistence</code> para resolver as operações básicas da persistência de <code>Mercadoria</code>.</p>
+ * 
+ * @see PostService
+ * @author JSH
+ */
+@Stateless
+public class PostServiceEJB extends AbstractPersistence<Post, Long> implements PostService {
+
+	@PersistenceContext
+    private EntityManager em;
+	
+	
+	@Override
+	protected EntityManager getEntityManager() {
+		return em;
+	}
+	
+	public PostServiceEJB() {
+		super(Post.class);
+	}
+	
+	
+	
+}

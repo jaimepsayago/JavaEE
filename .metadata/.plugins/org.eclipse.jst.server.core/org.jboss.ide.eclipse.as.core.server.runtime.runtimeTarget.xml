@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<classpath>
+  <source-attachment entry="D:/wildfly-20.0.0.Final/modules/system/layers/base/javax/persistence/api/main/jakarta.persistence-api-2.2.3.jar" runtime-id="WildFly 20.0 Runtime" source-attachment-path="C:/Users/JSH/.m2/repository/jakarta/persistence/jakarta.persistence-api/2.2.3/jakarta.persistence-api-2.2.3-sources.jar"/>
+</classpath>

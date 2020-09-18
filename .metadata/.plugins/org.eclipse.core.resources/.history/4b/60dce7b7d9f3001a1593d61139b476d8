@@ -1,0 +1,39 @@
+package test;
+
+import junit.framework.TestCase;
+
+import org.junit.Rule;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+import static org.junit.Assert.*;
+
+
+
+@RunWith(JUnit4.class)
+public class Testing{
+
+	 @Rule
+	    public EntityManagerFactory emf =
+                Persistence.createEntityManagerFactory("Persistence");
+
+	    @Rule
+	    public DBUnitRule dbUnitRule = DBUnitRule.instance(emProvider.connection()); 
+
+
+	    @Test
+	    @DataSet("users.yml") 
+	    public void shouldListUsers() {
+	        List<User> users = em(). 
+	                createQuery("select u from User u").
+	                getResultList();
+	        assertThat(users).
+	                isNotNull().
+	                isNotEmpty().
+	                hasSize(2);
+	    }
+	}

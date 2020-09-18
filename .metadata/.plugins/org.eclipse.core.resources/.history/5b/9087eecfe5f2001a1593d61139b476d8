@@ -1,0 +1,69 @@
+<ui:fragment xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+	
+
+
+	<h:form styleClass="form-horizontal">
+
+			
+	
+	
+		<fieldset>
+			<legend>
+				<h3>
+					<h:outputText value="Agregar" />
+					
+				</h3>
+			</legend>
+			
+
+	
+			
+			<div class="control-group">
+			
+				<h:inputHidden value="#{categoriaController.categoria.id}" />
+				
+			
+				<label class="control-label"><h:outputText
+						value="autor" /></label>
+				<div class="controls">
+					<h:inputText value="#{categoriaController.categoria.descripcion}"
+						label="Descripción" required="true"
+						styleClass="input-large">
+						<f:validateLength minimum="5" maximum="60" />
+					</h:inputText>
+				</div>
+				
+				
+				
+			</div>
+
+			
+		</fieldset>
+
+					
+		<div class="control-group">
+			<div class="controls">
+				<p:commandButton value="Guardar"
+				action="listaCategoria?faces-redirect=true"
+					actionListener="#{categoriaController.guardar()}" styleClass="btn btn-success" onclick="dlg.show();" oncomplete="dlg.hide();"
+					 />
+				<p:button value="Cancelar"
+					outcome="listaCategoria" styleClass="btn" />
+				
+			</div>
+		</div>
+		
+		<p:dialog id="dialog" header="Guardar" widgetVar="dlg" dynamic="true" modal="true">  
+	    	<h:outputText value="Guardar" />  
+		</p:dialog>
+		
+		
+		<p:messages id="messages" showDetail="false" autoUpdate="true" closable="true" />
+	
+	</h:form>
+</ui:fragment>
+

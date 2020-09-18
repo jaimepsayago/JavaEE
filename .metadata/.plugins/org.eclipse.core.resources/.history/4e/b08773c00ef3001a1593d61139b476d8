@@ -1,0 +1,32 @@
+	<!-- 		<p:toolbar>
+			<p:toolbarGroup align="left">
+				<p:commandButton value="Grabar1"
+					action="listaPost?faces-redirect=true"
+				actionListener="#{postController.guardar}"
+				
+					update="messagesdo" ajax="false"></p:commandButton>
+					
+					
+			</p:toolbarGroup>
+			
+			<p:toolbarGroup align="right">
+				
+			
+				<p:menuButton value="Opciones">
+					
+					<p:menuitem value="Regresar" outcome="listaPost.jsf" />
+					
+				</p:menuButton>
+			</p:toolbarGroup>
+		</p:toolbar> -->
+		
+		-*-*-*-*-*-*-*-*
+		
+		<p:confirmDialog id="confirmDialog" message="Eliminar"
+			header="Eliminar" severity="alert" widgetVar="confirmation">  
+	        <p:commandButton id="confirm" value="Confirmar" update="messages" 
+	        	oncomplete="confirmation.hide()" action="#{postController.remover}" />  
+	        <p:commandButton id="decline" value="No" 
+	        	onclick="confirmation.hide()" type="button" />
+	    </p:confirmDialog>
+	

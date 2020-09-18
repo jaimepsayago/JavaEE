@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="ejbModule"/>
+	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.jboss.ide.eclipse.as.core.server.runtime.runtimeTarget/WildFly 20.0 Runtime">
+		<attributes>
+			<attribute name="owner.project.facets" value="jst.ejb;jpt.jpa"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.8.0_121">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="D:/OneDrive/OneDrive - Pontificia Universidad Católica del Ecuador Sede Esmeraldas/Datos/ModuloDesarrolloSoftwareV2/Software/dbunit-2.5.0.jar"/>
+	<classpathentry kind="lib" path="D:/OneDrive/OneDrive - Pontificia Universidad Católica del Ecuador Sede Esmeraldas/Datos/ModuloDesarrolloSoftwareV2/Software/junit-4.11.jar"/>
+	<classpathentry kind="lib" path="D:/OneDrive/OneDrive - Pontificia Universidad Católica del Ecuador Sede Esmeraldas/Datos/ModuloDesarrolloSoftwareV2/Software/core-0.15.1.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="lib" path="D:/OneDrive/OneDrive - Pontificia Universidad Católica del Ecuador Sede Esmeraldas/Datos/ModuloDesarrolloSoftwareV2/Software/arquillian-core-api-1.4.0.Final.jar"/>
+	<classpathentry kind="lib" path="/DBUnitExample/lib/slf4j-api-1.6.1.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/HIbernate4.3"/>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>

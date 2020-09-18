@@ -1,0 +1,110 @@
+<ui:fragment xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+	
+
+
+	<h:form styleClass="form-horizontal">
+
+			
+	
+	
+		<fieldset>
+			<legend>
+				<h3>
+					<h:outputText value="Agregar" />
+					
+				</h3>
+			</legend>
+			
+			<p:toolbar>
+			<p:toolbarGroup align="left">
+				<p:commandButton value="Grabar"
+					action="listaPost?faces-redirect=true"
+				actionListener="#{postController.guardar}"
+					update="messagesdo" ajax="false"></p:commandButton>
+					
+					
+			</p:toolbarGroup>
+			
+			<p:toolbarGroup align="right">
+				
+			
+				<p:menuButton value="Opciones">
+					
+					<p:menuitem value="Regresar" outcome="listaPost.jsf" />
+					
+				</p:menuButton>
+			</p:toolbarGroup>
+		</p:toolbar>
+	
+			
+			<div class="control-group">
+			<h:inputHidden value="#{postController.post.id}" />
+			
+				<label class="control-label"><h:outputText
+						value="autor" /></label>
+				<div class="controls">
+					<h:inputText value="#{postController.post.author}"
+						label="Autor" required="true"
+						styleClass="input-large">
+						<f:validateLength minimum="5" maximum="60" />
+					</h:inputText>
+				</div>
+				
+				<label class="control-label"><h:outputText
+						value="autor" /></label>
+				<div class="controls">
+					<h:inputText value="#{post.mercadoria.nome}"
+						label="#{msg['label.mercadoria.nome']}" required="true"
+						styleClass="input-large">
+						<f:validateLength minimum="5" maximum="60" />
+					</h:inputText>
+				</div>
+				
+				<label class="control-label"><h:outputText
+						value="autor" /></label>
+				<div class="controls">
+					<h:inputText value="#{post.mercadoria.nome}"
+						label="#{msg['label.mercadoria.nome']}" required="true"
+						styleClass="input-large">
+						<f:validateLength minimum="5" maximum="60" />
+					</h:inputText>
+				</div>
+			</div>
+
+			
+		</fieldset>
+
+		<div class="control-group">
+			<div class="controls">
+				<p:commandButton value="Guardar"
+					action="#{postController.guardar}" styleClass="btn btn-success" onclick="dlg.show();" oncomplete="dlg.hide();"
+					rendered="#{postController.post != null}" />
+				<p:button value="Cancelar}"
+					outcome="listaPost" styleClass="btn" />
+				<p:commandButton value="Eliminar"
+					onclick="confirmation.show()"
+					rendered="#{postController.post.id != null}" immediate="true"
+					styleClass="btn btn-danger" />
+			</div>
+		</div>
+		
+		<p:dialog id="dialog" header="Guardar" widgetVar="dlg" dynamic="true" modal="true">  
+	    	<h:outputText value="Guardar" />  
+		</p:dialog>
+		
+		<p:confirmDialog id="confirmDialog" message="Eliminar"
+			header="Eliminar" severity="alert" widgetVar="confirmation">  
+	        <p:commandButton id="confirm" value="Confirmar" update="messages" 
+	        	oncomplete="confirmation.hide()" action="#{mercadoriaMB.remover}" />  
+	        <p:commandButton id="decline" value="#{msg['confirma.nao']}" 
+	        	onclick="confirmation.hide()" type="button" />
+	    </p:confirmDialog>
+	
+		<p:messages id="messages" showDetail="false" autoUpdate="true" closable="true" />
+		<h:inputHidden value="#{mercadoriaMB.mercadoria.id}" />
+	</h:form>
+</ui:fragment>

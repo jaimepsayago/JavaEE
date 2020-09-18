@@ -1,0 +1,49 @@
+package test;
+
+import junit.framework.TestCase;
+import model.Autor;
+
+import org.dbunit.dataset.*;
+import org.dbunit.dataset.datatype.DataType;
+import org.junit.runner.RunWith;
+import org.junit.runners.JUnit4;
+import org.junit.*;
+
+import com.github.dbunit.rules.DBUnitRule;
+import com.github.dbunit.rules.api.dataset.DataSet;
+import com.github.dbunit.rules.util.EntityManagerProvider;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+import static org.junit.Assert.*;
+
+import java.util.List;
+
+
+
+
+
+@RunWith(JUnit4.class)
+public class Testing{
+
+	 	@Rule
+	 	 public EntityManagerProvider emProvider = EntityManagerProvider.instance("Persistence");
+
+	    @Rule
+	    public DBUnitRule dbUnitRule = DBUnitRule.instance(emProvider.connection()); 
+
+
+	    @Test
+	    @DataSet("users.yml") 
+	    public void shouldListUsers() {
+	        List<Autor> users = em(). 
+	                createQuery("select u from Autor u").
+	                getResultList();
+	        assertThat(users).
+	                isNotNull().
+	                isNotEmpty().
+	                hasSize(2);
+	    }
+	}

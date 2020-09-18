@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="D:\TI\Development2020\dBuNIT\DBUnitExample"/>
+			<item value="D:\TI\Development2020\eclipse\workspace2020\Wildfly"/>
+			<item value="D:\TI\Development2020\ApiJavaEE\jersey-swagger-archetype\pom.xml"/>
+			<item value="C:\Users\JSH\git\CRUD-com-EJB-JPA-CDI-JSF-PrimeFaces-BootsFaces-e-WildFly_10"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="projectNameCombo">
+			<item value="jboss-as-kitchensink-rf"/>
+		</list>
+		<list key="packageCombo">
+			<item value="org.jboss.tools.example.richfaces"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<item key="catalog" value="All Catalogs"/>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+		</list>
+		<list key="groupId">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="wizardPage">
+		<list key="groupId">
+			<item value="AX-EAR"/>
+			<item value="AX-WEB"/>
+			<item value="AX-EJB"/>
+			<item value="EX1-EAR"/>
+			<item value="EX-EJB"/>
+			<item value="jpaMensajes"/>
+			<item value="api"/>
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+			<item value="AX-EAR"/>
+			<item value="AX-WEB"/>
+			<item value="AX-EJB"/>
+			<item value="EX1-EAR"/>
+			<item value="EX-EJB"/>
+			<item value="jpaMensajes"/>
+			<item value="api"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.jboss.tools.project.examples.stacksrequirements">
+		<item key="targetRuntime" value="WildFly 20.0 Runtime"/>
+	</section>
+</section>

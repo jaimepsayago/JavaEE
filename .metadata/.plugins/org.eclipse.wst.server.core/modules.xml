@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<modules>
+  <module moduleId="org.eclipse.jst.jee.server:PDV"/>
+  <module moduleId="org.eclipse.jst.jee.server:EX-EJB"/>
+  <module moduleId="org.eclipse.jst.jee.server:jpa1"/>
+  <module moduleId="org.eclipse.jst.jee.server:Web3" serverId="GlassFish 5 [domain1]"/>
+  <module moduleId="org.eclipse.jst.jee.server:AX-EAR" serverId="WildFly 20"/>
+  <module moduleId="org.eclipse.jst.jee.server:Web2" serverId="GlassFish 5 [domain1]"/>
+  <module moduleId="org.eclipse.jst.jee.server:EX-EAR" serverId="WildFly 20"/>
+  <module moduleId="org.eclipse.jst.jee.server:Web1" serverId="GlassFish 5 [domain1]"/>
+  <module moduleId="org.eclipse.jst.jee.server:EX-WEB"/>
+</modules>

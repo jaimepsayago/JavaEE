@@ -1,0 +1,143 @@
+<ui:fragment xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+	
+
+
+	<h:form styleClass="form-horizontal">
+
+		
+		<fieldset>
+			<legend>
+				<h3>
+					<h:outputText value="Agregar" />
+					
+				</h3>
+			</legend>
+			
+
+			
+			<div class="control-group">
+			
+				<h:inputHidden value="#{libroController.libro.id}" />
+				
+			
+				<label class="control-label"><h:outputText
+						value="titulo" /></label>
+				<div class="controls">
+					<h:inputText value="#{libroController.libro.titulo}"
+						label="titulo" required="true"
+						styleClass="input-large">
+						<f:validateLength minimum="5" maximum="60" />
+					</h:inputText>
+				</div>
+				
+				<label class="control-label"><h:outputText
+						value="isbn" /></label>
+				<div class="controls">
+					<h:inputText value="#{libroController.libro.isbn}"
+						label="isbn" required="true"
+						styleClass="input-large">
+						<f:validateLength minimum="5" maximum="60" />
+					</h:inputText>
+				</div>
+				
+				<label class="control-label"><h:outputText
+						value="Num Pag" /></label>
+				<div class="controls">
+					<h:inputText value="#{libroController.libro.numero}"
+						label="Num Pag" required="true"
+						styleClass="input-large">
+						<f:validateLength minimum="5" maximum="60" />
+					</h:inputText>
+				</div>
+				
+				
+				<label class="control-label"><h:outputText
+						value="Disponibles" /></label>
+				<div class="controls">
+					<h:inputText value="#{libroController.libro.ejemplaresDisponibles}"
+						label="Disponibles" required="true"
+						styleClass="input-large">
+						<f:validateLength minimum="5" maximum="60" />
+					</h:inputText>
+				</div>
+				
+				
+				<label class="control-label"><h:outputText
+						value="# ejemplares" /></label>
+				<div class="controls">
+					<h:inputText value="#{libroController.libro.numeroEjemplares}"
+						label="# ejemplares" required="true"
+						styleClass="input-large">
+						<f:validateLength minimum="5" maximum="60" />
+					</h:inputText>
+				</div>
+				
+				
+				
+				<label class="control-label"><h:outputText
+						value="idioma" /></label>
+				<div class="controls">
+					<h:inputText value="#{libroController.libro.idioma}"
+						label="idioma" required="true"
+						styleClass="input-large">
+						<f:validateLength minimum="5" maximum="60" />
+					</h:inputText>
+				</div>
+				
+				
+				
+				<label class="control-label"><h:outputText
+						value="año" /></label>
+				<div class="controls">
+					<h:inputText value="#{libroController.libro.anio}"
+						label="año" required="true"
+						styleClass="input-large">
+						<f:validateLength minimum="2" maximum="60" />
+					</h:inputText>
+				</div>
+				
+				<label class="control-label"><h:outputText
+						value="Categoría" /></label>
+				<div class="controls">
+				
+					
+					<p:selectOneMenu id="utiSelector"  value="#{libroController.libro.categoria}">
+					    <f:selectItem itemValue="#{null}" noSelectionOption="true" />
+					    <f:selectItems value="#{libroController.categoriaArray}" var="objeto" 
+					    itemValue="#{objeto}" itemLabel="#{objeto.description}" />
+					</p:selectOneMenu>
+				</div>
+				
+				
+			</div>
+
+			
+		</fieldset>
+
+					
+		<div class="control-group">
+			<div class="controls">
+				<p:commandButton value="Guardar"
+				action="listaLibro?faces-redirect=true"
+					actionListener="#{libroController.guardar()}" styleClass="btn btn-success" onclick="dlg.show();" oncomplete="dlg.hide();"
+					 />
+				<p:button value="Cancelar"
+					outcome="listaLibro" styleClass="btn" />
+				
+			</div>
+		</div>
+		
+		<p:dialog id="dialog" header="Guardar" widgetVar="dlg" dynamic="true" modal="true">  
+	    	<h:outputText value="Guardar" />  
+		</p:dialog>
+		
+		
+		<p:messages id="messages" showDetail="false" autoUpdate="true" closable="true" />
+	
+	</h:form>
+</ui:fragment>
+

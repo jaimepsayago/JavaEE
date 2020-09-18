@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Post.java&apos; to &apos;SpringREST-Client-RestTemplate/src/com.doj.restclient.account&apos;&#x0D;&#x0A;- Original project: &apos;blog&apos;&#x0D;&#x0A;- Destination element: &apos;SpringREST-Client-RestTemplate/src/com.doj.restclient.account&apos;&#x0D;&#x0A;- Original element: &apos;puce.serviceweb.blog.entities.Post.java&apos;" description="Copy compilation unit" destination="=SpringREST-Client-RestTemplate/src=/optional=/true=/=/maven.pomderived=/true=/&lt;com.doj.restclient.account" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;puce.serviceweb.blog.entities{Post.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1599164654517" units="1" version="1.0"/>
+</session>

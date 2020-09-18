@@ -1,0 +1,118 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="/layout/template.xhtml">
+	<ui:define name="pageTitle">
+		<h:outputText value="Libro" />
+		
+	</ui:define>
+
+	<ui:define name="content">
+		<div style="border-bottom: 1px solid #E5E5E5;">
+			<h3>
+				<h:outputText value="Libro" />
+	
+			</h3>
+		</div>
+		<h:form>
+			<p:dataTable id="dataTable" var="u"
+				value="#{libroController.lista}" paginator="true" rows="5"
+				paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+				rowsPerPageTemplate="5,10,15">
+				<p:column>
+					<f:facet name="header">#</f:facet>
+					<h:outputText value="#{u.id}" />
+				</p:column>
+	
+				<p:column sortBy="#{u.titulo}">
+					<f:facet name="header">
+						<h:outputText value="#{u.titulo}" />
+					</f:facet>
+						<h:outputText value="#{u.titulo}" />
+				</p:column>
+	
+				<p:column sortBy="#{u.isbn}">
+					<f:facet name="header">
+						<h:outputText value="#{u.isbn}" />
+					</f:facet>
+					<h:outputText value="#{u.isbn}" />
+				</p:column>
+				
+					<p:column sortBy="#{u.numero}">
+					<f:facet name="header">
+						<h:outputText value="#{u.numero}" />
+					</f:facet>
+					<h:outputText value="#{u.numero}" />
+				</p:column>
+				
+					<p:column sortBy="#{u.ejemplaresDisponibles}">
+					<f:facet name="header">
+						<h:outputText value="#{u.ejemplaresDisponibles}" />
+					</f:facet>
+					<h:outputText value="#{u.ejemplaresDisponibles}" />
+				</p:column>
+				
+					<p:column sortBy="#{u.numeroEjemplares}">
+					<f:facet name="header">
+						<h:outputText value="#{u.numeroEjemplares}" />
+					</f:facet>
+					<h:outputText value="#{u.numeroEjemplares}" />
+				</p:column>
+				
+					<p:column sortBy="#{u.anio}">
+					<f:facet name="header">
+						<h:outputText value="#{u.anio}" />
+					</f:facet>
+					<h:outputText value="#{u.anio}" />
+				</p:column>
+				
+					<p:column sortBy="#{u.categoria.descripcion}">
+					<f:facet name="header">
+						<h:outputText value="#{u.categoria.descripcion}" />
+					</f:facet>
+					<h:outputText value="#{u.categoria.descripcion}" />
+				</p:column>
+			
+				
+				<p:column headerText="Menu" disabledSelection="false" print="false"
+					exportable="false">
+					<p:toolbarGroup align="right">
+						<p:menuButton value="Opciones">
+							<p:menuitem value="Modificar">
+												
+								
+						<h:link outcome="editarPost" value="Editar"
+							title="Editar #{u.id}">
+							<f:param name="id" value="#{u.id}" />
+							</h:link>
+								
+							
+
+							</p:menuitem>
+							
+							<p:menuitem value="Eliminar" action="listaPost.jsf"
+								onclick="if (!confirm('Esta seguro de eliminar esta fila?')) return false"
+								actionListener="#{postController.remover}" update="dataTable"
+								ajax="true" >
+								<f:attribute name="postEliminar" value="#{u.id}">
+								
+								</f:attribute>
+							</p:menuitem>
+							
+							
+
+						</p:menuButton>
+					</p:toolbarGroup>
+					
+				</p:column>
+	
+				
+			</p:dataTable>
+		</h:form>
+		<h:messages />
+	</ui:define>
+</ui:composition>
+</html>

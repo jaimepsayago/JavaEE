@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+D:\TI\Development2020\eclipse\workspaceTallerJavaEE\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+2917090651.index
+270106300.index
+416770926.index
+10000194.index
+2310001343.index
+3985224473.index

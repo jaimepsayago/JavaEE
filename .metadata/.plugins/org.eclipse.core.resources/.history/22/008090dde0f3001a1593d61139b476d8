@@ -1,0 +1,28 @@
+package test;
+
+import org.junit.Test;
+
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+import static org.junit.Assert.*;
+
+public class TestEmfPersistence {
+
+    @Test
+    public void createEntityManagerTest() {
+    	 private EntityManager em1;
+    	
+		/*
+		 * EntityManagerFactory emf =
+		 * Persistence.createEntityManagerFactory("Persistence"); EntityManager em =
+		 * emf.createEntityManager();
+		 */
+        
+        em1= Persistence.createEntityManagerFactory("Persistence").createEntityManager();
+        assertNotNull(em1);
+        em1.close();
+    }
+}

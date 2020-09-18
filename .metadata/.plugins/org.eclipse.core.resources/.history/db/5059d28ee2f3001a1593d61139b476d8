@@ -1,0 +1,26 @@
+package test;
+
+import static org.junit.Assert.assertEquals;
+
+import java.util.List;
+
+import javax.inject.Inject;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+
+import dao.AutorService;
+import model.Autor;
+
+@RunWith(CdiTestRunner.class)
+public class BusinessLogicTest {
+	 
+    @Inject 
+    private AutorService s;
+    
+    @Test
+    public void testDbAccess() {
+        List<Autor> list = s.findAll();
+        assertEquals(list.size(),4);
+    }
+}

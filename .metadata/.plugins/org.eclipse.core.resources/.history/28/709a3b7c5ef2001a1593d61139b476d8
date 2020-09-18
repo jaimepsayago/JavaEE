@@ -1,0 +1,50 @@
+app.title=Projeto Maestria: CDI, JSF e EJB3
+label.mercadoria.nome=Nome
+label.mercadoria.descripcion=Descripcion
+label.mercadoria.cantidad=Cantidad
+label.mercadoria.precio=Preçio
+
+label.sobre=Sobre
+label.sobre.projeto=Projeto
+
+label.listagem=Listagem
+label.incluir=Incluir
+label.editar=Editar
+
+label.yaw=JSH
+label.logo.yaw=PUCE
+label.detalhes.projeto=<strong>Projeto software libre</strong>, tecnologías <em>CDI (Context Dependency Injection)</em>, JSF, e <em>EJB 3</em> na plataforma de <strong>cloud computing</strong> (PaaS) <em></em>.
+label.saiba.mais=saber mas
+
+button.atualizar=Actualizar
+button.salvar=guardar
+button.cancelar=cancelar
+button.excluir=excluir
+
+menu.lista=<i class="icon-list"></i> Lista
+menu.incluir=<i class="icon-pencil"></i> Agregar
+menu.sobre=<i class="icon-book"></i> Sobre
+
+page.title.lista.post=Lista de post
+page.title.incluir.mercadoria=Incluir post
+page.title.editar.mercadoria=Editar post
+page.title.sobre=Sobre o projeto
+page.title.app=App Maestria CDI, JSF e EJB 3
+
+excluir.mercadoria.confirma=Confirma quitar ?
+excluir.mercadoria=Excluir 
+confirma.sim=Si
+confirma.nao=No
+
+msg.erro.salvar.mercadoria=guardar.
+msg.erro.listar.mercadoria=lista.
+msg.erro.remover.mercadoria=remover.
+
+sobre.build=<strong>Implementation-Build:</strong> 350683fd9ad242462ebffb9cb5f565481a4f4991
+sobre.title=<strong>Implementation-Title:</strong> Demo CDI, JSF e EJB 3 no CloudBees
+sobre.site=<strong>Implementation-Site:</strong> http://www.pucesd.edu.ec
+sobre.built=<strong>Built-by:</strong> JSH
+
+
+dialog.emexecucao.titulo=en ejecucion
+dialog.emexecucao.aguarde=espere...
